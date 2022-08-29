@@ -10,9 +10,9 @@ void operators() {
   x -= 5; // 10
   x *= 5; // 50
 
-  // x /= 5; this is not possible due to the x being of type int instead of double
+  // x /= 5; ?= this is not possible due to the x being of type int instead of double
 
-  x ~/= 5; // 10 /=/ you can do this to divide integers
+  x ~/= 5; //= 10 =// ?= you can do this to divide integers
   bool isEqual = 5 == 10;
   String myString = "Hello" + isEqual.toString();
   String myStringBetter = "Hello $isEqual";
