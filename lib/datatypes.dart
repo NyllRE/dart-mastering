@@ -37,6 +37,6 @@ void datatypes() {
   String? myNull = null;
   print(myNull?.length);
   // if you know that the code is unsafe and want to check it:
-  print(myNull!.length);
+  // print(myNull!.length);
   // vscode can't know my mail lol
 }
