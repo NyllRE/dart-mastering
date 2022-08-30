@@ -10,8 +10,8 @@ void conditions() {
     print("welp, I don't have a clue how it's $myInt now");
   }
 
-  //=== SWITCH STATEMENTS ===//
-  //= checks only for Equality =//
+  //=<< SWITCH STATEMENTS >>=//
+  //=< checks only for Equality >=//
   switch (myInt) {
     case 5:
       print("it's $myInt!");
@@ -22,4 +22,10 @@ void conditions() {
     default:
       print("the code is cursed");
   }
+
+  <String>[
+    'first',
+    'next',
+    if (true) 'third' else 'deez',
+  ];
 }
