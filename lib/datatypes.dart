@@ -37,32 +37,4 @@ void datatypes() {
 
   //=>  to change the number type (this doesn't affect the variable myFinalInteger)
   myFinalInteger.toDouble();
-
-  //=<< LISTS >>=//
-
-  List<int> myList = [1, 2, 3];
-  myList[0]; //=> Returns First Element
-
-  //=> you can declare the type of items in list even in a list literal <=//
-  <int>[1, 2, 3];
-
-  //==> Mapping Lists
-  //=> By default this is type of Iterable, so you need to add .toList() <=//
-  final myMappedList = myList.map((mynum) => mynum + 5).toList();
-
-  //==> Filtering Lists
-  final myFilteredList = myList.where((mynum) => mynum >= 2).toList();
-
-  //=<< MAPS "JSON" >>=//
-
-  Map<String, dynamic> myMap = {
-    "name": "Jason Derulo",
-    "age": 69,
-    "registered": true
-  };
-  myMap['name']; //=> same as Python
-
-  //=<< SETS >>=//
-
-  Set<int> mySet = {1, 2, 3};
 }
