@@ -1,12 +1,12 @@
 void datatypes() {
   String myString = "Le bruh moment!";
-  print(myString);
-  print(myString.contains('bruh')); //=> validate if a word is in string => Bool
+
+  myString.contains('bruh'); //=> validate if a word is in string <=> Bool
 
   int myInteger = 6;
   double myDouble = 6.9;
-  print(myDouble);
-  print(myInteger.isEven); //=> Bool
+
+  myInteger.isEven; //=> returns Bool
 
   //= An easier way to work with numbers
   //= num combines int and double
@@ -33,21 +33,27 @@ void datatypes() {
 
   //= for nullable variables:
   String? myNull = null;
-  print(myNull?.length);
-  //= if you know that the code is unsafe and want to check it:
+  myNull?.length; //=> returns null
 
-  //= to change the number type (this doesn't affect the variable myFinalInteger)
-  print(myFinalInteger.toDouble());
+  //=>  to change the number type (this doesn't affect the variable myFinalInteger)
+  myFinalInteger.toDouble();
 
-  //==< LISTS >==//
+  //=<< LISTS >>=//
 
   List<int> myList = [1, 2, 3];
   myList[0]; //=> Returns First Element
 
-  <int>[1, 2, 3];
   //=> you can declare the type of items in list even in a list literal <=//
+  <int>[1, 2, 3];
 
-  //==< MAPS "JSON" >==//
+  //==> Mapping Lists
+  //=> By default this is type of Iterable, so you need to add .toList() <=//
+  final myMappedList = myList.map((mynum) => mynum + 5).toList();
+
+  //==> Filtering Lists
+  final myFilteredList = myList.where((mynum) => mynum >= 2).toList();
+
+  //=<< MAPS "JSON" >>=//
 
   Map<String, dynamic> myMap = {
     "name": "Jason Derulo",
@@ -56,8 +62,7 @@ void datatypes() {
   };
   myMap['name']; //=> same as Python
 
-  //==< SETS >==//
+  //=<< SETS >>=//
 
   Set<int> mySet = {1, 2, 3};
-  
 }

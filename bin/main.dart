@@ -8,10 +8,10 @@ import 'package:dart_mastering/returningFunctions.dart';
 
 //=< I keep commenting out stuff because I only want certain parts to work when I need them >=//
 void main(List<String> arguments) {
-  // datatypes();
+  datatypes();
   // operators();
   // conditions();
   // loops();
   // functions();
-  returningFunctions();
+  // returningFunctions();
 }
