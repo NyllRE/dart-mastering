@@ -48,9 +48,9 @@ void enums() {
   AccountType userAccount;
   userAccount = AccountType.vip;
 
-  //=> or >=>>
+  //=>> or
 
-  final userAccount2 = AccountType.free;
+  const userAccount2 = AccountType.free;
 
   //=<< USE CASE EXAMPLE >>=//
 
