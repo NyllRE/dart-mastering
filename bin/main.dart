@@ -1,15 +1,17 @@
-import 'package:dart_mastering/datatypes.dart' as datatypes;
-import 'package:dart_mastering/operators.dart' as operators;
-import 'package:dart_mastering/conditions.dart' as conditions;
-import 'package:dart_mastering/loops.dart' as loops;
-import 'package:dart_mastering/functions.dart' as functions;
+import 'package:dart_mastering/datatypes.dart';
+import 'package:dart_mastering/operators.dart';
+import 'package:dart_mastering/conditions.dart';
+import 'package:dart_mastering/loops.dart';
+import 'package:dart_mastering/functions.dart';
 import 'package:dart_mastering/returningFunctions.dart';
 
+
+//=< I keep commenting out stuff because I only want certain parts to work when I need them >=//
 void main(List<String> arguments) {
-  // datatypes.datatypes();
-  // operators.operators();
-  // conditions.conditions();
-  // loops.loops();
-  // functions.functions();
+  // datatypes();
+  // operators();
+  // conditions();
+  // loops();
+  // functions();
   returningFunctions();
 }
