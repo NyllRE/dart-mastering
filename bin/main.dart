@@ -5,9 +5,9 @@ import 'package:dart_mastering/loops.dart' as loops;
 import 'package:dart_mastering/functions.dart' as functions;
 
 void main(List<String> arguments) {
-  // datatypes.datatypes();
+  datatypes.datatypes();
   // operators.operators();
   // conditions.conditions();
   // loops.loops();
-  functions.functions();
+  // functions.functions();
 }

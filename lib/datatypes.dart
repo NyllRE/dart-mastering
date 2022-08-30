@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 void datatypes() {
 // Datatypes
 
@@ -31,12 +33,13 @@ void datatypes() {
   final myFinal = "this can't be changed later";
 
   // you can tell it what type it is
-  final int myFinalInteger = 3;
+  final num myFinalInteger = 3;
 
   // for nullable variables:
   String? myNull = null;
   print(myNull?.length);
   // if you know that the code is unsafe and want to check it:
-  // print(myNull!.length);
-  // vscode can't know my mail lol
+
+  // to change the number type (this doesn't affect the variable myFinalInteger)
+  print(myFinalInteger.toDouble());
 }
