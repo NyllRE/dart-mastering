@@ -1,31 +1,51 @@
-import 'dart:web_gl';
 
 void classes() {
-  User myuser = const User("deez", 45);
+  User myuser = User(
+    name: "deez",
+  );
   myuser.hasLongName();
 
   //=>> you can call static methods directly from class <<=//
   User.longNameThreshold; //=> 10
+  print(myuser.brief);
+
+  myuser.email;
+  print(myuser.brief);
 }
 
 class User {
   final String name;
-  final int _privateNetWorth;
+  String? _email;
 
-  const User(
-    this.name,
-    this._privateNetWorth,
-  );
+  User({
+    required this.name,
+    String? email,
+  }) : _email = email;
+  //=> : >=> constructs a value based on other values
 
-  bool hasLongName() {
-    return name.length >= 10;
-  }
+  bool hasLongName() => name.length >= 10;
 
-  bool _privateFunction() {
-    return true;
-  }
+  String _privateFunction() => "this can't be accessed outside";
 
   //==<< STATIC VALUES >>==//
+
   //=>> can be called from outside directly <<=//
   static const longNameThreshold = 10;
+
+  //=>> another way to give a value outside is with the get method <<=//
+  String get brief => 'username: $name, mail: $_email';
+
+  //=> Called with >=> myuser.brief
+
+  //=>> set usecasae:
+
+  set email(String mail) {
+    if (mail.contains('@')) {
+      _email = mail;
+    }
+  }
+
+  //=>> better set usecase
+  String get email => _email ?? 'No Email Was Assigned';
+
 }
