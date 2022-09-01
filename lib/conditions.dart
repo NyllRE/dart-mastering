@@ -1,7 +1,7 @@
 void conditions() {
   final myInt = 5;
 
-  //=== IF STATEMENTS ===//
+  //==<< IF STATEMENTS >>==
   if (myInt == 5) {
     print("it's $myInt!");
   } else if (myInt == 25) {
@@ -10,8 +10,8 @@ void conditions() {
     print("welp, I don't have a clue how it's $myInt now");
   }
 
-  //=<< SWITCH STATEMENTS >>=//
-  //=< checks only for Equality >=//
+  //==<< SWITCH STATEMENTS >>==//
+  //=>> checks only for Equality <<=//
   switch (myInt) {
     case 5:
       print("it's $myInt!");

@@ -1,7 +1,7 @@
 void datatypes() {
   String myString = "Le bruh moment!";
 
-  myString.contains('bruh'); //=> validate if a word is in string >=> Bool
+  myString.contains('bruh'); //=> validate if a word is in string >-> Bool
 
   int myInteger = 6;
   double myDouble = 6.9;
