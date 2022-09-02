@@ -12,6 +12,8 @@ void classes() {
   myuser.email = "deez@bruhs";
 }
 
+//=>> classes are extending from Object originally, which means that behind the curtains this is how the class starts:
+//=> class User extends Object {...}
 class User {
   //==<< CONSTRUCTORS >>===
   //=>> equivalent of __init__() in python or constructor() in javascript
@@ -53,6 +55,7 @@ class User {
 
   //==<< OVERRIDDEN OPERATORS >>==
   //=>> you can override anything in a class to change its functionality
+  //=>> generated with the ~Dart Data Class Generator~ extension by pressing `space + .` on the class constructor
   @override
   bool operator ==(covariant User other) {
     if (identical(this, other)) return true;
