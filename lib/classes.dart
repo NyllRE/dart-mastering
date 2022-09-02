@@ -52,7 +52,7 @@ class User {
   String get email => _email ?? 'No Email Was Assigned';
 
   //==<< OVERRIDDEN OPERATORS >>==
-  //=>>
+  //=>> you can override anything in a class to change its functionality
   @override
   bool operator ==(covariant User other) {
     if (identical(this, other)) return true;
