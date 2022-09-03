@@ -1,4 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:meta/meta.dart';
+
 void classes() {
   User myuser = User(
     name: "deez",
@@ -10,6 +12,10 @@ void classes() {
   User.longNameThreshold; //=> 10
 
   myuser.email = "deez@bruhs";
+  print(myuser.email);
+
+  Admin myAdmin = Admin(adminId: 6456, name: 'notch', email: 'deez@bruhs');
+  print(myAdmin.brief);
 }
 
 //=>> classes are extending from Object originally, which means that behind the curtains this is how the class starts:
@@ -31,7 +37,10 @@ class User {
 
   bool hasLongName() => name.length >= 10;
 
-  String _privateFunction() => "this can't be accessed outside";
+  @mustCallSuper //=> from `meta` package
+  void signOut() {
+    print("signing out");
+  }
 
   // ==<< STATIC VALUES >>==
 
@@ -40,7 +49,8 @@ class User {
 
   //=>> another way to give a value outside is with the get method <<=//
   String get brief =>
-      'username: $name, mail: $_email'; //=> Called with -> myuser.brief
+    'username: $name, mail: ${_email ?? email}';
+  //=> Called with -> myuser.brief
 
   //=>> set usecasae:
 
@@ -65,4 +75,24 @@ class User {
 
   @override
   int get hashCode => name.hashCode ^ _email.hashCode;
+}
+
+//==<< EXTENDING CLASSES >>==//
+class Admin extends User {
+  final int _adminId;
+
+  Admin({
+    required adminId,
+    required super.name,
+    required String? email,
+  }) : _adminId = adminId;
+
+  @override
+  String get brief => "Admin:\n${super.brief}";
+
+  @override
+  void signOut() {
+    print('Signing out Admin Account');
+    super.signOut();
+  }
 }

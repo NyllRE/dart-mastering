@@ -31,5 +31,5 @@ void conditions() {
 
   //=>> A way to declare strings based on if the falue is nulled or not
   // same as || in Javascript and or in python
-  String myConditionalString = 'deez' ?? 'nuts';
+  String myConditionalString = null ?? 'nuts';
 }
