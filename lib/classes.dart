@@ -18,12 +18,16 @@ void classes() {
   print(myAdmin.brief);
 }
 
+
+
+
 //=>> classes are extending from Object originally, which means that behind the curtains this is how the class starts:
 //=> class User extends Object {...}
+//=>> if you want the class to be only extended and never called:
+//=> abstract class User {...}
 class User {
   //==<< CONSTRUCTORS >>===
   //=>> equivalent of __init__() in python or constructor() in javascript
-
   final String name;
   String? _email;
 
@@ -48,11 +52,10 @@ class User {
   static const longNameThreshold = 10;
 
   //=>> another way to give a value outside is with the get method <<=//
-  String get brief =>
-    'username: $name, mail: ${_email ?? email}';
+  String get brief => 'username: $name, mail: ${_email ?? email}';
   //=> Called with -> myuser.brief
 
-  //=>> set usecasae:
+  //=>> set usecase:
 
   set email(String mail) {
     if (mail.contains('@')) {
@@ -62,6 +65,16 @@ class User {
 
   //=>> better set usecase
   String get email => _email ?? 'No Email Was Assigned';
+
+  //==<< Factories >>==
+
+  factory User.admin() {
+    return Admin(
+      adminId: 123,
+      name: 'deez',
+      email: 'bru@l',
+    );
+  }
 
   //==<< OVERRIDDEN OPERATORS >>==
   //=>> you can override anything in a class to change its functionality
