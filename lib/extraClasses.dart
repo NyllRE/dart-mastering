@@ -40,3 +40,18 @@ class IntegerDataReader implements DataReader<int> {
     return 12345;
   }
 }
+
+//==<< MIXINS >>==
+//=>> mixins are like extensions to your classes
+//=>> you can use it with extends
+//=> class chatBot extends Bot with ElevatedClient {...}
+
+mixin ElevatedClient {
+  void sendElevatedMessage(String text) {
+    print('Elevated Message:\n$text');
+  }
+}
+
+class chatBot with ElevatedClient {
+  void deez(String nuts) {}
+}
