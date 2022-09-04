@@ -90,7 +90,7 @@ class User {
   int get hashCode => name.hashCode ^ _email.hashCode;
 }
 
-//==<< EXTENDING CLASSES >>==//
+//==<< EXTENDING CLASSES >>==
 class Admin extends User {
   final int _adminId;
 

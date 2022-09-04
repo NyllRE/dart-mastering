@@ -16,5 +16,13 @@ String namedRequiredParams({
 String functions() {
   String reply = positionalParams(5, 5, "hi!");
   String namedReply = namedPositionalParams(x: 5, y: 5, greeting: "hi!");
+  myMethod<String>("deez");
+
   return '$reply\n$namedReply';
+}
+
+//==<< Custom Type Return >>==
+//=>> you can include the type returned as you like
+void myMethod<Type>(Type arg) {
+  Type arg;
 }
