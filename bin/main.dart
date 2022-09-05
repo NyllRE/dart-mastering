@@ -6,6 +6,7 @@ import 'package:dart_mastering/loops.dart';
 import 'package:dart_mastering/functions.dart';
 import 'package:dart_mastering/returningFunctions.dart';
 import 'package:dart_mastering/classes.dart';
+import 'package:dart_mastering/extensions.dart';
 
 //=< I keep commenting out stuff because I only want certain parts to work when I need them >=//
 void main(List<String> arguments) {
@@ -16,5 +17,6 @@ void main(List<String> arguments) {
   // functions();
   // returningFunctions();
   // extraDatatypes();
-  classes();
+  // classes();
+  extensions();
 }
