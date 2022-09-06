@@ -3,21 +3,18 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'classes.freezed.dart';
 
 void classes() {
-  User myuser = User(
-    name: "deez",
-    age: 69
-  );
+  User myuser = User(name: "deez", age: 69);
 
-  // myuser.hasLongName();
+  const resultSuccess = Result.success(100);
+  print(resultSuccess.when(
+    success: (value) => "Deez nuts $value",
+    failure: (value) => "Deez balls $value",
+  ));
 
-  //=>> you can call static methods directly from class <<=//
-  // User.longNameThreshold; //=> 10
-
-  // myuser.email = "deez@bruhs";
-  // print(myuser.email);
-
-  // Admin myAdmin = Admin(adminId: 6456, name: 'notch', email: 'deez@bruhs');
-  // print(myAdmin.brief);
+  print(resultSuccess.maybeWhen(
+    orElse: () => '',
+    failure: (v) => "deez balls $v",
+  ));
 }
 
 @freezed
@@ -29,7 +26,12 @@ class User with _$User {
   }) = _User;
 }
 
-
+@freezed
+class Result with _$Result {
+  const Result._();
+  const factory Result.success(int value) = _Success;
+  const factory Result.failure(String errorMessage) = _Failure;
+}
 
 //=>> the method below is the traditional way, but with the freezed package you can write much less code to do the same thing above
 //=> requires the `part 'classes.freeze.dart'` on the first line
