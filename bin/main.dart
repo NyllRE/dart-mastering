@@ -13,17 +13,17 @@ import 'package:dart_mastering/streamGenerator.dart';
 // import 'package:dart_mastering/extensions.dart';
 
 //=>> I keep commenting out stuff because I only want certain parts to work when I need them >>=//
-void main(List<String> arguments) {
-  // datatypes();
-  // operators();
-  // conditions();
-  // loops();
-  // functions();
-  // returningFunctions();
-  // extraDatatypes();
-  // classes();
-  // extensions();
-  // trycatch();
-  // fetchingData();
+void main(List<String> arguments) async {
+  datatypes();
+  operators();
+  conditions();
+  loops();
+  functions();
+  returningFunctions();
+  extraDatatypes();
+  classes();
+  extensions();
+  trycatch();
+  fetchingData();
   streamGenerator();
 }

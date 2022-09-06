@@ -1,7 +1,7 @@
 Future<void> streamGenerator() async {
   createMessageStream()
       .map((message) => message) //=> modifies each item
-      .where((message) => message.length > 7) //=> filters the items
+      .where((message) => message.length > 0) //=> filters the items
       .listen((event) {
     print(event);
   });

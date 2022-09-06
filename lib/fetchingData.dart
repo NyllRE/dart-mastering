@@ -1,6 +1,6 @@
 import 'package:http/http.dart';
 
-void fetchingData() async {
+Future fetchingData() async {
   // throughAsync();
   // throughCallBacks();
   throughPeriodicStream();
@@ -22,15 +22,15 @@ void throughCallBacks() {
 
 
 Future<void> throughPeriodicStream() async {
-  final myStream = Stream.periodic(Duration(seconds: 0));
+  final myStream = Stream.periodic(Duration(seconds: 1));
 
   //=>> an action that happens once each second     /\
   final subscription = myStream.listen((event) {
     print("this happens each second");
   });
 
-  //=>> an action that happens after 2 seconds \/
-  await Future.delayed(const Duration(seconds: 2));
+  //=>> an action that happens after 1 seconds \/
+  await Future.delayed(const Duration(seconds: 1));
   //=> python sleep() equivalent
   subscription.cancel();
 }
