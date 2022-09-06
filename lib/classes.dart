@@ -1,31 +1,44 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:meta/meta.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+part 'classes.freezed.dart';
 
 void classes() {
   User myuser = User(
     name: "deez",
+    age: 69
   );
 
-  myuser.hasLongName();
+  // myuser.hasLongName();
 
   //=>> you can call static methods directly from class <<=//
-  User.longNameThreshold; //=> 10
+  // User.longNameThreshold; //=> 10
 
-  myuser.email = "deez@bruhs";
-  print(myuser.email);
+  // myuser.email = "deez@bruhs";
+  // print(myuser.email);
 
-  Admin myAdmin = Admin(adminId: 6456, name: 'notch', email: 'deez@bruhs');
-  print(myAdmin.brief);
+  // Admin myAdmin = Admin(adminId: 6456, name: 'notch', email: 'deez@bruhs');
+  // print(myAdmin.brief);
+}
+
+@freezed
+class User with _$User {
+  const User._();
+  const factory User({
+    required String name,
+    required int age,
+  }) = _User;
 }
 
 
 
+//=>> the method below is the traditional way, but with the freezed package you can write much less code to do the same thing above
+//=> requires the `part 'classes.freeze.dart'` on the first line
 
 //=>> classes are extending from Object originally, which means that behind the curtains this is how the class starts:
 //=> class User extends Object {...}
 //=>> if you want the class to be only extended and never called:
 //=> abstract class User {...}
-class User {
+/* class User {
   //==<< CONSTRUCTORS >>===
   //=>> equivalent of __init__() in python or constructor() in javascript
   final String name;
@@ -88,10 +101,11 @@ class User {
 
   @override
   int get hashCode => name.hashCode ^ _email.hashCode;
-}
+} */
+
 
 //==<< EXTENDING CLASSES >>==
-class Admin extends User {
+/* class Admin extends User {
   final int _adminId;
 
   Admin({
@@ -109,3 +123,4 @@ class Admin extends User {
     super.signOut();
   }
 }
+ */

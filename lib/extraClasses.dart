@@ -25,7 +25,7 @@ class otherClass implements exampleClass {
   int get publicProperty => throw UnimplementedError();
 }
 
-//==<< Real Life UseCase >>==
+//==<< Real Life UseCase >>==//
 //=>> here this abstract class acts like a datareader interface
 abstract class DataReader<Type> {
   Type readData();
@@ -41,7 +41,7 @@ class IntegerDataReader implements DataReader<int> {
   }
 }
 
-//==<< MIXINS >>==
+//==<< MIXINS >>==//
 //=>> mixins are like extensions to your classes
 //=>> you can use it with extends
 //=> class chatBot extends Bot with ElevatedClient {...}
