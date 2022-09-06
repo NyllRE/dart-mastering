@@ -9,9 +9,10 @@ import 'package:dart_mastering/classes.dart';
 import 'package:dart_mastering/parts.dart';
 import 'package:dart_mastering/trycatch.dart';
 import 'package:dart_mastering/fetchingData.dart';
+import 'package:dart_mastering/streamGenerator.dart';
 // import 'package:dart_mastering/extensions.dart';
 
-//=< I keep commenting out stuff because I only want certain parts to work when I need them >=//
+//=>> I keep commenting out stuff because I only want certain parts to work when I need them >>=//
 void main(List<String> arguments) {
   // datatypes();
   // operators();
@@ -22,6 +23,7 @@ void main(List<String> arguments) {
   // extraDatatypes();
   // classes();
   // extensions();
-  trycatch();
-  fetchingData();
+  // trycatch();
+  // fetchingData();
+  streamGenerator();
 }
